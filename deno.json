@@ -1,7 +1,7 @@
 {
   "imports": {
     "std/": "https://deno.land/std@0.181.0/",
-    "lodash-es/": "import lodashEs from 'https://cdn.jsdelivr.net/npm/lodash-es@4.17.21/+esm'"
+    "lodash": "https://esm.sh/lodash@4.17.21"
   },
   "tasks": {
     "dev": "deno run --watch src/main.ts"
