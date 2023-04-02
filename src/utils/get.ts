@@ -1,8 +1,10 @@
-export function get(m, path) {
-  let res = m;
+export function get<T, U>(m: T, path: U) {
+  let result = m;
+
   for (let i = 0; i < path.length; i++) {
     const key = path[i];
-    res = res[key];
+    result = result[key];
   }
-  return res;
+
+  return result;
 }
