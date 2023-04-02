@@ -4,6 +4,5 @@ export function get(m, path) {
     const key = path[i];
     res = res[key];
   }
-
   return res;
 }

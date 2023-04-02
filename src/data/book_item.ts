@@ -1,4 +1,4 @@
-import { Book } from "./types";
+import {Book} from "../types";
 
 export const watchManBook: Book = {
   isbn: "978-123345666",
