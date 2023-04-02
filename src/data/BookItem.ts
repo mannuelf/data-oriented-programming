@@ -3,7 +3,7 @@ import {Book} from "../types";
 export const watchManBook: Book = {
   isbn: "978-123345666",
   title: "Watchman",
-  authors: ["alan-moor", "dave-gibbon"],
+  authors: ["alan-moore", "dave-gibbon"],
   bookItems: [
     {
       id: "book-item-1",

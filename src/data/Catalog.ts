@@ -1,4 +1,4 @@
-export const catalogData = {
+export const CatalogData = {
   booksByIsbn: {
     '978-1779501127': {
       isbn: '978-1779501127',
