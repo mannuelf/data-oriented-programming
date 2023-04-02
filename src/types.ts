@@ -7,4 +7,18 @@ export type Book = {
     libId: string;
     isLent: boolean;
   }[];
-}
+};
+
+export type Author = {
+  name: string;
+  bookIsbns: string[];
+};
+
+export type catalogData = {
+  booksByIsbn: {
+    key: Book;
+  };
+  authorsById: {
+    key: Author;
+  };
+};
