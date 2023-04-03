@@ -6,10 +6,7 @@ export function get(data: unknown, path: []) {
   let result = data;
   for (let i = 0; i < path.length; i++) {
     const key = path[i];
-//    console.log(key);
     result = result[key];
-//    console.log(result);
-
   }
 
   return result;
