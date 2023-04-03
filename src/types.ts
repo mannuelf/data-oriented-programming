@@ -1,6 +1,7 @@
 export type Book = {
   isbn: string;
   title: string;
+  publicationYear: number;
   authors: string[];
   bookItems: {
     id: string;
