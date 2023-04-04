@@ -11,5 +11,5 @@ export const authors = _.map(['alan-moore', 'dave-gibbons'], (authorId: string) 
 */
 export const authors = (catalogData) =>
   map(['alan-moore', 'dave-gibbons'], (authorId) =>
-    get(catalogData, ['authorsById', authorId, 'name']),
+    _.get(catalogData, ['authorsById', authorId, 'name']),
   );
