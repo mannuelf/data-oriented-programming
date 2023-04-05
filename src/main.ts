@@ -6,14 +6,20 @@ import { CatalogData } from './data/CatalogData.ts';
 import { get } from './utils/get.ts';
 import { Book } from './data/Book.ts';
 import { searchBooksByTitle } from './search-books-by-title.ts';
+import { filter } from './utils/filter.ts';
 
 const _ = lodash;
 
 const getBookTitle = ['booksByIsbn', '978-1779501127', 'title'];
 const getAuthors = ['authorsById', 'alan-moore'];
 const getBookItems = ['booksByIsbn', '978-1779501127', 'bookItems'];
-const getBook = ['booksByIsbn', '878-1779501127'];
+const getBook = ['booksByIsbn', '978-1779501127'];
 
+console.log(
+  filter(['Watchmen', 'Batman'], (title) => {
+    return title.includes('Watch');
+  }),
+);
 //console.log('getBook',_.get(CatalogData, getBook));
 
 //console.log(getBookTitle);
@@ -30,7 +36,7 @@ const allAuthors = authors(CatalogData, getBook);
 const allAuthorNames = authorNames(CatalogData, getBook);
 //console.log('authorNames:', allAuthorNames);
 
-const bookInformation = bookInfo(CatalogData, getBook);
+//const bookInformation = bookInfo(CatalogData, getBook);
 //console.log('bookInformation', bookInformation);
 
 /*
@@ -41,14 +47,12 @@ console.log(
 );
  */
 
-/*
 const bookInfo = {
-  title: _.get(CatalogData, ['booksByIsbn', '978-1779501127', 'title']),
-  isbn: _.get(CatalogData, ['booksByIsbn', '978-1779501127', 'isbn']),
+  title: _.get(CatalogData, ['booksByIsbn', '878-1779501127', 'title']),
+  isbn: _.get(CatalogData, ['booksByIsbn', '878-1779501127', 'isbn']),
 };
-console.log(bookInfo);
- */
 
-const mySearch = searchBooksByTitle(CatalogData, getBook);
+// console.log(bookInfo);
+
+const mySearch = searchBooksByTitle(CatalogData, 'Pur');
 console.log(mySearch);
-
