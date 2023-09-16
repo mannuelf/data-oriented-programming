@@ -20,32 +20,28 @@ console.log(
     return title.includes('Watch');
   }),
 );
-//console.log('getBook',_.get(CatalogData, getBook));
+console.log('getBook',_.get(CatalogData, getBook));
+console.log(getBookTitle);
 
-//console.log(getBookTitle);
-
-// const title = _.get(catalogData, ['booksByIsbn', '978-1779501127', 'title']);
-//const aBookTitle = get(CatalogData, getBookTitle);
-// console.log('bookTitle:', aBookTitle);
-
-//console.log(get(CatalogData, getBookItems));
+const title = _.get(catalogData, ['booksByIsbn', '978-1779501127', 'title']);
+const aBookTitle = get(CatalogData, getBookTitle);
+console.log('bookTitle:', aBookTitle);
+console.log(get(CatalogData, getBookItems));
 
 const allAuthors = authors(CatalogData, getBook);
 //console.log('authors:', allAuthors);
 
 const allAuthorNames = authorNames(CatalogData, getBook);
-//console.log('authorNames:', allAuthorNames);
+//console.log('authorNames:', allAuthorNa no mes);
 
 //const bookInformation = bookInfo(CatalogData, getBook);
 //console.log('bookInformation', bookInformation);
 
-/*
 console.log(
   _.map(['alan-moore', 'dave-gibbons'], (authorId) =>
     _.get(CatalogData, ['authorsById', authorId, 'bookIsbns']),
   ),
 );
- */
 
 const bookInfo = {
   title: _.get(CatalogData, ['booksByIsbn', '878-1779501127', 'title']),
